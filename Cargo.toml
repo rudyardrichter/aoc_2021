@@ -2,7 +2,7 @@
 name = "aoc_2021"
 version = "0.1.0"
 authors = ["Rudyard Richter <rudyardrichter@uchicago.edu>"]
-edition = "2018"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -11,4 +11,5 @@ edition = "2018"
 [dependencies]
 aoc-runner = "0.3.0"
 aoc-runner-derive = "0.3.0"
+bitvec = "0.22.3"
 itertools = "0.10.1"
