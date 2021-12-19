@@ -16,5 +16,6 @@ mod day_12;
 mod day_13;
 mod day_14;
 mod day_15;
+mod day_16;
 
 aoc_lib! { year = 2021 }
