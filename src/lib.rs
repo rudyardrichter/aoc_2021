@@ -1,5 +1,6 @@
 #[macro_use]
 extern crate aoc_runner_derive;
+extern crate sscanf;
 
 mod day_01;
 mod day_02;
@@ -17,5 +18,6 @@ mod day_13;
 mod day_14;
 mod day_15;
 mod day_16;
+mod day_17;
 
 aoc_lib! { year = 2021 }
