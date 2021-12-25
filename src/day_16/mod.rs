@@ -35,7 +35,8 @@ impl Packet {
     fn value(&self) -> usize {
         match &self.content {
             PacketContent::Literal(value) => *value,
-            PacketContent::Operator{subpackets} => match self.type_id {
+            #[rustfmt::skip]
+            PacketContent::Operator { subpackets } => match self.type_id {
                 0 => subpackets.iter().map(|packet| packet.value()).sum(),
                 1 => subpackets.iter().map(|packet| packet.value()).product(),
                 2 => subpackets.iter().map(|packet| packet.value()).min().unwrap(),
@@ -44,7 +45,7 @@ impl Packet {
                 6 => if subpackets[0].value() < subpackets[1].value() { 1 } else { 0 },
                 7 => if subpackets[0].value() == subpackets[1].value() { 1 } else { 0 },
                 _ => 0,
-            }
+            },
         }
     }
 }
